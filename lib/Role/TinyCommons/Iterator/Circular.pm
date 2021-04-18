@@ -61,8 +61,8 @@ sub each_item {
 
 A circular iterator is just like a L<regular
 iterator|Role::TinyCommons::Iterator> except that it will never run out of items
-(unless it is empty). When the last item has been retrieved, the index will just
-move back to the beginning; C<get_iterator_index> will return 0 again and
+(unless it is empty). When the last item has been retrieved, the position will
+move back to the beginning; C<get_iterator_pos> will return 0 again and
 C<get_next_item> will retrieve the first item.
 
 

@@ -60,7 +60,7 @@ sub each_item {
 
 A resettable iterator is just like a L<regular
 iterator|Role::TinyCommons::Iterator> except that it has L</reset_iterator> to
-reset the iterator back to the beginning.
+reset the iterator position back to the beginning.
 
 
 =head1 ROLES MIXED IN
