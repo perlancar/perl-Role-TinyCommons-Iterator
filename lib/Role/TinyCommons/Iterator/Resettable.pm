@@ -27,7 +27,7 @@ sub get_all_items {
     @items;
 }
 
-sub get_elem_count {
+sub get_item_count {
     my $self = shift;
 
     $self->reset_iterator;

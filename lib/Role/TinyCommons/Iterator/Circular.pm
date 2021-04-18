@@ -40,7 +40,7 @@ sub get_item_count {
 }
 
 sub each_item {
-    my $self = shift;
+    my ($self, $coderef) = @_;
 
     my $orig_pos = $self->get_iterator_pos;
     my $pos = $orig_pos;

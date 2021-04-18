@@ -10,6 +10,6 @@ use FindBin '$Bin';
 use lib "$Bin/lib";
 
 # todo
-# use Local::Array::Iterator::Circular;
+# use Local::Array::Iterator::Bidirectional;
 ok 1;
 done_testing;
