@@ -98,6 +98,4 @@ None.
 
 This role is loosely based on L<Array::Iterator>, but the method names have been
 made with "verb"+"object" naming style to be more verbose and less likely clash
-with your other methods. Both exception-based and undef-based signalling of out
-of items are provided for convenience. The "StopIteration" name comes from
-Python.
+with your other methods. The "StopIteration" name comes from Python.
