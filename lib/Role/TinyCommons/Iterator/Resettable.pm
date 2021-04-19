@@ -8,7 +8,7 @@ package Role::TinyCommons::Iterator::Resettable;
 use Role::Tiny;
 use Role::Tiny::With;
 
-with 'Role::TinyCommons::Iterator';
+with 'Role::TinyCommons::Iterator::Basic';
 
 ### required
 
@@ -58,14 +58,14 @@ sub each_item {
 
 =head1 DESCRIPTION
 
-A resettable iterator is just like a L<regular
-iterator|Role::TinyCommons::Iterator> except that it has L</reset_iterator> to
-reset the iterator position back to the beginning.
+A resettable iterator is just like a L<basic
+iterator|Role::TinyCommons::Iterator::Basic> except that it has
+L</reset_iterator> to reset the iterator position back to the beginning.
 
 
 =head1 ROLES MIXED IN
 
-L<Role::TinyCommons::Iterator>
+L<Role::TinyCommons::Iterator::Basic>
 
 
 =head1 REQUIRED METHODS
@@ -137,4 +137,4 @@ Equivalent to:
 
 =head1 SEE ALSO
 
-L<Role::TinyCommons::Iterator>
+L<Role::TinyCommons::Iterator::Basic>

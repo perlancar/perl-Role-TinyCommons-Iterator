@@ -8,7 +8,7 @@ package Role::TinyCommons::Iterator::Circular;
 use Role::Tiny;
 use Role::Tiny::With;
 
-with 'Role::TinyCommons::Iterator';
+with 'Role::TinyCommons::Iterator::Basic';
 
 ### required
 
@@ -59,16 +59,16 @@ sub each_item {
 
 =head1 DESCRIPTION
 
-A circular iterator is just like a L<regular
-iterator|Role::TinyCommons::Iterator> except that it will never run out of items
-(unless it is empty). When the last item has been retrieved, the position will
-move back to the beginning; C<get_iterator_pos> will return 0 again and
-C<get_next_item> will retrieve the first item.
+A circular iterator is just like a L<basic
+iterator|Role::TinyCommons::Iterator::Basic> except that it will never run out
+of items (unless it is empty). When the last item has been retrieved, the
+position will move back to the beginning; C<get_iterator_pos> will return 0
+again and C<get_next_item> will retrieve the first item.
 
 
 =head1 ROLES MIXED IN
 
-L<Role::TinyCommons::Iterator>
+L<Role::TinyCommons::Iterator::Basic>
 
 
 =head1 REQUIRED METHODS
@@ -87,6 +87,6 @@ No additional required methods.
 
 =head1 SEE ALSO
 
-L<Role::TinyCommons::Iterator>
+L<Role::TinyCommons::Iterator::Basic>
 
 L<Role::TinyCommons::Iterator::Resettable>

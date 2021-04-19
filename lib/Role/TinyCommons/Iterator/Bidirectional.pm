@@ -8,7 +8,7 @@ package Role::TinyCommons::Iterator::Bidirectional;
 use Role::Tiny;
 use Role::Tiny::With;
 
-with 'Role::TinyCommons::Iterator';
+with 'Role::TinyCommons::Iterator::Basic';
 
 ### required
 
@@ -22,15 +22,15 @@ requires 'get_prev_item';
 
 =head1 DESCRIPTION
 
-A bidirectional iterator is just like a L<regular
-iterator|Role::TinyCommons::Iterator> except that it has L</get_prev_item> in
-addition to C<get_next_item> and L</has_prev_item> in addition to
-C<get_prev_item>.
+A bidirectional iterator is just like a L<basic
+iterator|Role::TinyCommons::Iterator::Basic> except that it has
+L</get_prev_item> in addition to C<get_next_item> and L</has_prev_item> in
+addition to C<get_prev_item>.
 
 
 =head1 ROLES MIXED IN
 
-L<Role::TinyCommons::Iterator>
+L<Role::TinyCommons::Iterator::Basic>
 
 
 =head1 REQUIRED METHODS
@@ -47,4 +47,4 @@ No additional provided methods.
 
 =head1 SEE ALSO
 
-L<Role::TinyCommons::Iterator>
+L<Role::TinyCommons::Iterator::Basic>

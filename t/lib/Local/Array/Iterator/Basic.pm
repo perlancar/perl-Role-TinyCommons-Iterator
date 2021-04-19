@@ -1,9 +1,9 @@
 package # hide from PAUSE
-    Local::Array::Iterator;
+    Local::Array::Iterator::Basic;
 
 use Role::Tiny::With;
 
-with 'Role::TinyCommons::Iterator';
+with 'Role::TinyCommons::Iterator::Basic';
 
 sub new {
     my ($class, @items) = @_;

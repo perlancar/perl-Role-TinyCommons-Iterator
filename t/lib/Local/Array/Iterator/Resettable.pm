@@ -1,7 +1,7 @@
 package # hide from PAUSE
     Local::Array::Iterator::Resettable;
 
-use parent 'Local::Array::Iterator';
+use parent 'Local::Array::Iterator::Basic';
 use Role::Tiny::With;
 
 with 'Role::TinyCommons::Iterator::Resettable';
