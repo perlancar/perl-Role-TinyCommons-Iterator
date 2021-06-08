@@ -15,6 +15,15 @@ requires 'get_iterator_pos';
 
 ### provided
 
+sub get_coderef_iterator {
+    my ($self, $dies) = @_;
+    if ($dies) {
+        return sub { $self->get_next_item };
+    } else {
+        return sub { $self->has_next_item ? $self->get_next_item : undef };
+    }
+}
+
 1;
 # ABSTRACT: A basic iterator
 
@@ -91,7 +100,28 @@ first item has the position 0.
 
 =head1 PROVIDED METHODS
 
-None.
+=head2 get_coredef_iterator
+
+Usage:
+
+ my $iterator = $obj->get_coderef_iterator($dies); # => coderef
+
+Return a coderef that can be called repeatedly to get items. There are two kinds
+of coderef iterator that can be returned. If C<$dies> is set to to true, will
+return a code that dies when there is no more item. If C<$dies> is set to false
+(the default), will return a coderef that does not die but instead returns
+C<undef> when there is no more item. If you have a collection that has an
+C<undef> item, you will not be able to tell whether the C<undef> that the
+coderef iterator returns is a sign of exhaustion of items or is an actual
+C<undef> item.
+
+Basically this method is just a shortcut for:
+
+ if ($dies) {
+     return sub { $self->get_next_item };
+ } else {
+     return sub { $self->has_next_item ? $self->get_next_item :
+ }
 
 
 =head1 SEE ALSO
