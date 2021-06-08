@@ -100,7 +100,7 @@ first item has the position 0.
 
 =head1 PROVIDED METHODS
 
-=head2 get_coredef_iterator
+=head2 get_coderef_iterator
 
 Usage:
 
